@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DentiVida – Aprende, previene y sonríe</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="stylesheet" href="css/styles.css"></head><body>
+<header><div class="bar">
+<a class="logo" href="#inicio"><svg width="34" height="34" viewBox="0 0 100 100"><use href="#tooth"/></svg>DentiVida</a>
+<button id="burger" aria-label="Abrir menú">☰</button>
+<nav id="nav" aria-label="Principal"></nav></div></header>
+
+<svg width="0" height="0" style="position:absolute"><symbol id="tooth" viewBox="0 0 100 100"><path d="M50 12c-9-7-30-6-34 12-3 14 5 22 8 36 2 12 6 20 11 20 6 0 4-18 15-18s9 18 15 18c5 0 9-8 11-20 3-14 11-22 8-36-4-18-25-19-34-12z" fill="#fff" stroke="#398EAE" stroke-width="4"/><circle cx="38" cy="42" r="4" fill="#24536B"/><circle cx="62" cy="42" r="4" fill="#24536B"/><path d="M40 56q10 10 20 0" stroke="#24536B" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="30" cy="52" r="5" fill="#A9DCEC"/><circle cx="70" cy="52" r="5" fill="#A9DCEC"/></symbol></svg>
+
+<main>
+<!-- INICIO -->
+<section class="view" id="inicio">
+<div class="hero"><div>
+<h1>¡Tu sonrisa merece el mejor cuidado!</h1>
+<p>Aprende, previene y sonríe. Pequeños hábitos pueden hacer una gran diferencia.</p>
+<p id="hello" style="font-weight:800"></p>
+<a class="btn" href="#rutina">Comenzar ahora</a> <a class="btn s" href="#caries">Descubrir cómo prevenir las caries</a></div>
+<svg class="mascot" viewBox="0 0 100 100" role="img" aria-label="Mascota diente sonriente"><use href="#tooth"/></svg></div>
+<div class="sec grid" id="ben"></div>
+<div class="sec grid">
+<div class="card"><div class="big">2 veces</div>Cepillado diario con pasta dental fluorada es la recomendación general.</div>
+<div class="card"><div class="big">2 min</div>Es el tiempo recomendado para cada cepillado.</div>
+<div class="card"><div class="big">1 vez</div>Limpieza entre los dientes al día, con hilo o cepillos interdentales.</div>
+<div class="card"><div class="big">Frecuencia</div>Importa más cuántas veces al día tomas azúcar que la cantidad total.</div></div>
+<div class="sec card" style="display:flex;gap:16px;align-items:center"><svg width="64" height="64"><use href="#tooth"/></svg><div><h3>Consejo del día</h3><p id="tip" style="margin:0"></p></div></div>
+<div class="sec hero" style="grid-template-columns:1fr;text-align:center"><h2>Tu sonrisa es única. ¡Cuídala todos los días!</h2><div><a class="btn" href="#progreso">Ver mi progreso</a></div></div>
+</section>
+
+<!-- CARIES -->
+<section class="view" id="caries"><h2>Aprende sobre las caries</h2>
+<div class="grid" id="cinfo"></div>
+<div class="sec card"><h3>Etapas de una lesión de caries</h3>
+<div class="chips" id="stg"></div>
+<div class="grid" style="align-items:center"><svg id="tsvg" viewBox="0 0 100 110" style="max-width:240px;margin:auto"></svg><div><h3 id="stt"></h3><p id="std"></p></div></div>
+<small>Ilustración educativa; no es un diagnóstico clínico.</small></div></section>
+
+<!-- ALIMENTACION -->
+<section class="view" id="alimentos"><h2>Alimentación saludable</h2>
+<p>Ningún alimento evita las caries por sí solo: la prevención depende de varios factores, sobre todo del cepillado con flúor y de la frecuencia con que consumes azúcares.</p>
+<input id="fq" placeholder="Busca un alimento: manzana, gaseosa, queso…" aria-label="Buscar alimento">
+<div class="chips" id="ff"></div><div class="grid" id="fg"></div>
+<div class="sec card"><h3>¿Qué puedo comer para cuidar mi sonrisa?</h3><div class="grid">
+<div><b>Desayuno</b><br>Yogur natural con fruta picada y un vaso de agua.</div>
+<div><b>Almuerzo</b><br>Pollo o pescado con verduras y ensalada de zanahoria.</div>
+<div><b>Refrigerio</b><br>Manzana, palitos de zanahoria o un trozo de queso.</div></div></div>
+<div class="sec card"><h3>Hábitos recomendados</h3><ul><li>Reduce la frecuencia de consumo de azúcar.</li><li>Bebe agua durante el día.</li><li>Evita picar productos azucarados constantemente.</li><li>Elige refrigerios saludables y mantén horarios de comida.</li></ul></div></section>
+
+<!-- HIGIENE -->
+<section class="view" id="higiene"><h2>Higiene dental</h2>
+<div class="card" style="text-align:center"><h3>Temporizador de cepillado</h3>
+<div class="ring"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="var(--c1)" stroke-width="8"/><circle id="rg" cx="50" cy="50" r="44" fill="none" stroke="var(--p)" stroke-width="8" stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="0"/></svg><div class="n" id="tn">2:00</div></div>
+<p id="tm">Cepilla 30 s cada zona: arriba‑afuera, arriba‑adentro, abajo‑afuera, abajo‑adentro.</p>
+<button class="btn" id="ts">Iniciar</button> <button class="btn s" id="tp">Pausar</button> <button class="btn s" id="tr">Reiniciar</button></div>
+<div class="sec grid" id="hg"></div></section>
+
+<!-- RUTINA -->
+<section class="view" id="rutina"><h2>Mi rutina dental</h2>
+<div class="card"><p>Marca lo que hiciste hoy. Tus datos se guardan en este navegador. Los recordatorios suenan mientras DentiVida está abierta; para avisos con la página cerrada se necesita un servidor con notificaciones push.</p>
+<div class="bar2"><i id="rb" style="width:0"></i></div><p id="rp"></p><div id="rl"></div>
+<form id="rf" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><input id="rn" placeholder="Nuevo hábito, p. ej. Enjuague con flúor" style="flex:1;min-width:200px"><input id="rt" type="time" value="12:00" style="width:auto"><button class="btn">Agregar hábito</button></form>
+<p><button class="btn s" id="np">Activar notificaciones del navegador</button></p></div>
+<div class="sec card"><h3>Historial de recordatorios</h3><div id="rh">Aún no hay recordatorios.</div></div></section>
+
+<!-- JUEGOS -->
+<section class="view" id="juegos"><h2>Juegos y desafíos</h2>
+<div class="chips" id="gt"></div><div class="card" id="gb"></div></section>
+
+<!-- PROGRESO -->
+<section class="view" id="progreso"><h2>Mi progreso</h2>
+<div class="grid"><div class="card"><div class="big" id="p1">0</div>Días seguidos</div><div class="card"><div class="big" id="p2">0</div>Hábitos hoy</div><div class="card"><div class="big" id="p3">–</div>Mejor quiz</div></div>
+<div class="sec grid"><div class="card"><h3>Cumplimiento semanal</h3><canvas id="ch" height="200"></canvas></div><div class="card"><h3>Calendario (últimos 28 días)</h3><div class="cal" id="cal"></div></div></div>
+<div class="sec card"><h3>Insignias</h3><div class="chips" id="bd"></div><p id="pm"></p><small>Esto mide tus hábitos, no la salud de tus dientes. Eso lo evalúa tu odontólogo.</small></div></section>
+
+<!-- CONSEJOS -->
+<section class="view" id="consejos"><h2>Consejos y preguntas frecuentes</h2><div id="faq"></div>
+<div class="sec card"><h3>Si tienes una restauración dental</h3><p>Cepíllala con flúor y usa hilo con suavidad en esa zona. Evita morder objetos duros. Las indicaciones exactas dependen del procedimiento y de tu odontólogo.</p></div>
+<div class="sec card"><h3>DentiBot</h3><div class="chat" id="cm"></div>
+<form id="cf" style="display:flex;gap:8px;margin-top:8px"><input id="ci" placeholder="Pregunta sobre cepillado, hilo, azúcar…" aria-label="Mensaje"><button class="btn">Enviar</button></form>
+<small>DentiBot es educativo: no diagnostica ni sustituye una consulta odontológica.</small></div></section>
+
+<!-- CONTACTO -->
+<section class="view" id="contacto"><h2>Contacto</h2><form class="card" id="kf" novalidate style="max-width:560px">
+<label for="kn">Nombre</label><input id="kn"><label for="ke">Correo electrónico</label><input id="ke" type="email"><label for="ka">Asunto</label><input id="ka"><label for="km">Mensaje</label><textarea id="km" rows="4"></textarea>
+<p id="kerr" style="color:#b3402f;font-weight:700"></p><button class="btn">Enviar mensaje</button></form></section>
+</main>
+<footer><b>DentiVida</b> – Aprende, previene y sonríe.<br>Proyecto educativo. La información no reemplaza la consulta con un odontólogo ni constituye un diagnóstico.<br><small>Referencias generales: OMS y ADA.</small></footer>
+<div id="toast" role="status"></div>
+
+<script src="js/app.js"></script></body></html>
+
+
